@@ -5,11 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
 /**
@@ -23,10 +20,6 @@ public class Chapter1Application {
 		SpringApplication.run(Chapter1Application.class, args);
 	}
 
-    @RequestMapping(value = "/demo1",method = RequestMethod.GET)
-	public String demo1(){
-		return "hello springboot";
-	}
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx){
 		return args -> {

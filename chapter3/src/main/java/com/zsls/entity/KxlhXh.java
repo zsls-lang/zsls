@@ -40,6 +40,12 @@ public class KxlhXh {
 	public KxlhXh() {
 	}
 
+	public KxlhXh(String kxlh, String studentNo, String collegeCode) {
+		this.kxlh = kxlh;
+		this.studentNo = studentNo;
+		this.collegeCode = collegeCode;
+	}
+
 	@Override
 	public String toString() {
 			return "KxlhXh{" +

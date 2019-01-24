@@ -54,5 +54,11 @@ public class SpringJdbcController {
 		return jdbcTemplate.update(sql, kxlh, student_no,college_code);
 	}
 
+	@RequestMapping(value = "/addKxlhXh",method = RequestMethod.POST)
+	public int addKxlhXh(@RequestBody KxlhXh kxlhXh) {
+		String sql = "insert into t_kxlh_xh(kxlh,student_no,college_code) values(?,?,?)";
+		return jdbcTemplate.update(sql, kxlhXh.getKxlh(), kxlhXh.getStudentNo(),kxlhXh.getCollegeCode());
+	}
+
 
 }

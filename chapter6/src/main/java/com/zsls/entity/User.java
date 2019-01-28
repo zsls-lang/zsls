@@ -1,5 +1,7 @@
 package com.zsls.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
@@ -9,6 +11,7 @@ import java.io.Serializable;
  *@Date 2019/1/23 18:08
  *@Version 1.0
  */
+@Table(name="t_user")
 public class User implements Serializable {
 
 

@@ -1,6 +1,7 @@
 package com.zsls;
 
 import com.zsls.entity.User;
+import com.zsls.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -20,13 +21,6 @@ public class Chapter6ApplicationTests {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Chapter6ApplicationTests.class);
 
 	/**
-	 *@Autowired
-	 *     private StringRedisTemplate stringRedisTemplate;
-	 *
-	 *     @Autowired
-	 *     private RedisTemplate<String, Serializable> redisCacheTemplate;
-	 *
-	 *
 	 *     @Test
 	 *     public void get() {
 	 *         // TODO 测试线程安全
@@ -51,6 +45,9 @@ public class Chapter6ApplicationTests {
 	@Autowired
 	private RedisTemplate<String, Serializable> redisCacheTemplate;
 
+	@Autowired
+	private UserService userService;
+
 	@Test
 	public void test() {
 		//		ExecutorService executorService = Executors.newFixedThreadPool(1000);
@@ -65,6 +62,25 @@ public class Chapter6ApplicationTests {
 		redisCacheTemplate.opsForValue().set(key, new User(8, "c", "d"));
 		User user = (User)redisCacheTemplate.opsForValue().get(key);
 		System.out.println(user);
+	}
+
+
+	@Test
+	public void get() {
+		final User user = userService.get(1);
+		LOGGER.info("[get] - [{}]", user);
+		final User user1 = userService.get(1);
+		LOGGER.info("[get**] - [{}]", user1);
+	}
+
+
+	@Test
+	public void saveOrUpdate() {
+		final User user = userService.saveOrUpdate(new User(13, "u5", "p5"));
+		LOGGER.info("[saveOrUpdate] - [{}]", user);
+		final User user1 = userService.get(13);
+		LOGGER.info("[get] - [{}]", user1);
+		userService.delete(13);
 	}
 
 }

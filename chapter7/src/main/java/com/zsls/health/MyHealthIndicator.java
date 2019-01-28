@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
  *@Author zsls
  *@Date 2019/1/28 12:52
  *@Version 1.0
+ * http://localhost:9001/mymonitor/health
  */
 @Component("my1")
 public class MyHealthIndicator implements HealthIndicator {
@@ -19,7 +20,7 @@ public class MyHealthIndicator implements HealthIndicator {
 	public Health health() {
 		int code = check();
 		if (code != 0) {
-			Health.down().withDetail("code", code).withDetail("version", VERSION).build();
+			return Health.down().withDetail("code", code).withDetail("version", VERSION).withDetail("error","服务故障").build();
 		}
 		return Health.up().withDetail("code", code)
 				.withDetail("version", VERSION).up().build();

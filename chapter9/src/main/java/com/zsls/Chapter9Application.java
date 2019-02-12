@@ -17,6 +17,11 @@ public class Chapter9Application {
 		SpringApplication.run(Chapter9Application.class, args);
 	}
 
+	/**
+	 * 很关键：默认情况下 TaskScheduler 的 poolSize = 1
+	 *
+	 * @return 线程池
+	 */
 	@Bean
 	public TaskScheduler threadPoolExecutor(){
 		ThreadPoolTaskScheduler taskExecutor = new ThreadPoolTaskScheduler();

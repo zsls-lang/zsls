@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zsls.dao.AnalogDataMapper">
+  <resultMap id="BaseResultMap" type="com.zsls.entity.AnalogData">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="one" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="two" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="three" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="four" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="user_name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="current_year" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="type" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+</mapper>

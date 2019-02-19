@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -23,7 +24,7 @@ import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
  *@Date 2019/2/18 17:13
  *@Version 1.0
  */
-@ControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionHandle extends ResponseEntityExceptionHandler {
 
 	/**

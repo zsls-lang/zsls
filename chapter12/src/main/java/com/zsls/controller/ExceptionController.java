@@ -17,7 +17,6 @@ import java.util.Map;
  *@Version 1.0
  */
 @RestController
-@RequestMapping
 public class ExceptionController {
 	@GetMapping("/test1")
 	public String test1() {
@@ -43,7 +42,7 @@ public class ExceptionController {
 	@GetMapping("/test3")
 	public String test3( Integer num) {
 		// TODO 演示需要，实际上参数是否为空通过 @RequestParam(required = true)  就可以控制
-		if (num == 10) {
+		if (num == null) {
 			throw new CustomException(400, "num不能为空");
 		}
 		int i = 10 / num;

@@ -13,5 +13,4 @@ import org.springframework.stereotype.Service;
 public class AnalogDataServiceImpl extends BaseServiceImpl<AnalogData> implements IAnalogDataService {
     @Autowired
     private AnalogDataMapper analogDataMapper;
-
 }

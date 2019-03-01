@@ -45,10 +45,15 @@
                     <verbose>true</verbose>
                 </configuration>
                 <dependencies>
-                    <dependency>
+                    <!--<dependency>
                         <groupId>com.zsls</groupId>
                         <artifactId>mybatis-generator-expands</artifactId>
                         <version>${mybatis-generator-expands}</version>
+                    </dependency>-->
+                    <dependency>
+                        <groupId>com.github.zk1023lang</groupId>
+                        <artifactId>mybatis-expands-generator</artifactId>
+                        <version>1.0.0</version>
                     </dependency>
                 </dependencies>
             </plugin>

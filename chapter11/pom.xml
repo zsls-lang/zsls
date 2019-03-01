@@ -24,13 +24,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>com.zsls</groupId>
-            <artifactId>mybatis-generator-expands</artifactId>
-            <version>${mybatis-generator-expands}</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -45,11 +38,6 @@
                     <verbose>true</verbose>
                 </configuration>
                 <dependencies>
-                    <!--<dependency>
-                        <groupId>com.zsls</groupId>
-                        <artifactId>mybatis-generator-expands</artifactId>
-                        <version>${mybatis-generator-expands}</version>
-                    </dependency>-->
                     <dependency>
                         <groupId>com.github.zk1023lang</groupId>
                         <artifactId>mybatis-expands-generator</artifactId>

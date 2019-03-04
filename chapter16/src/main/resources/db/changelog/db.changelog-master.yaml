@@ -1,0 +1,53 @@
+databaseChangeLog:
+# 支持 yaml 格式的 SQL 语法
+- changeSet:
+    id: T001-20180304-001
+    author: zsls
+    changes:
+    - createTable:
+        tableName: person_test
+        remarks: 测试
+        columns:
+        - column:
+            name: id
+            type: int
+            autoIncrement: true
+            remarks: id自增长
+            constraints:
+              primaryKey: true
+              nullable: false
+
+        - column:
+            name: first_name
+            type: varchar(255)
+            remarks: 姓
+            constraints:
+              nullable: false
+        - column:
+            name: last_name
+            type: varchar(255)
+            constraints:
+              nullable: false
+
+- changeSet:
+    id: T001-20180304-002
+    author: zsls
+    changes:
+    - insert:
+        tableName: person_test
+        columns:
+        - column:
+            name: first_name
+            value: Marcel
+        - column:
+            name: last_name
+            value: Overdijk
+
+# 同时也支持依赖外部SQL文件
+- changeSet:
+    id: T002-20180304-003
+    author: zsls
+    changes:
+    - sqlFile:
+        encoding: utf8
+        path: classpath:db/changelog/sqlfile/test1.sql

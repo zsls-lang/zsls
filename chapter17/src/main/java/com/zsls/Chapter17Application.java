@@ -3,12 +3,14 @@ package com.zsls;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 /**
  * @Description //TODO
  * 可以参考tomcat 里面的 apache-tomcat-8.5.33\webapps\examples\websocket 的html
  * apache-tomcat-8.5.33\webapps\examples\WEB-INF\classes\websocket 的java
  */
+@EnableWebSocket
 @SpringBootApplication
 public class Chapter17Application {
 

@@ -16,7 +16,6 @@ import java.util.*;
  *@ClassName AuthRealm
  *@Description TODO 认证领域
  */
-//@Configuration
 public class CustomerRealm extends AuthorizingRealm {
 	/**
 	 * 认证回调函数,登录时调用
@@ -54,6 +53,7 @@ public class CustomerRealm extends AuthorizingRealm {
 	 */
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+		System.out.println(principalCollection.getPrimaryPrincipal());
 		Session session = SecurityUtils.getSubject().getSession();
 		User user = (User) session.getAttribute("USER_SESSION");
 		// 权限信息对象info,用来存放查出的用户的所有的角色（role）及权限（permission）

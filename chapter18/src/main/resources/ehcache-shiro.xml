@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ehcache updateCheck="false" name="shiroCache">
+    <!-- 存储最大对象数 -->
+    <!-- 是否永久保存 -->
+    <!-- 最大空闲时间  单位：秒 -->
+    <!-- 存活时间 -->
+    <!-- 溢出到磁盘 -->
+    <!-- 磁盘上最大存储的对象数 -->
+    <!-- 服务器重启后磁盘上的数据是否有效 -->
+    <!-- 每隔多长时间去开启一次线程清理数据 -->
+    <!-- 淘汰策略    最近一段时间利用率低的会被优先清理掉 -->
     <defaultCache
             maxElementsInMemory="10000"
             eternal="false"

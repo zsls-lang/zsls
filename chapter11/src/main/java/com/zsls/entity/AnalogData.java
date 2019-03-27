@@ -6,42 +6,42 @@
 */
 package com.zsls.entity;
 
-import com.zsls.base.BaseModel;
 import javax.persistence.*;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.github.zsls.base.BaseModel;
+//import io.swagger.annotations.ApiModel;
+//import io.swagger.annotations.ApiModelProperty;
 
 
-@ApiModel(value = "模拟数据表", description = "模拟数据表")
+//@ApiModel(value = "模拟数据表", description = "模拟数据表")
 @Table(name = "analog_data")
 public class AnalogData extends BaseModel {
-    @ApiModelProperty(value = "")
+//    @ApiModelProperty(value = "")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ApiModelProperty(value = "标签名")
+//    @ApiModelProperty(value = "标签名")
     private String one;
 
-    @ApiModelProperty(value = "数据1，今年数据")
+//    @ApiModelProperty(value = "数据1，今年数据")
     private String two;
 
-    @ApiModelProperty(value = "数据2，明年数据")
+//    @ApiModelProperty(value = "数据2，明年数据")
     private String three;
 
-    @ApiModelProperty(value = "数据3，后年数据")
+//    @ApiModelProperty(value = "数据3，后年数据")
     private String four;
 
-    @ApiModelProperty(value = "录入数据的管理员名")
+//    @ApiModelProperty(value = "录入数据的管理员名")
     @Column(name = "user_name")
     private String userName;
 
-    @ApiModelProperty(value = "年")
+//    @ApiModelProperty(value = "年")
     @Column(name = "current_year")
     private String currentYear;
 
-    @ApiModelProperty(value = "数据分类标识")
+//    @ApiModelProperty(value = "数据分类标识")
     private String type;
 
     public AnalogData(Integer id, String one, String two, String three, String four, String userName, String currentYear, String type) {

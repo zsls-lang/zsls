@@ -1,6 +1,6 @@
 package com.zsls.service.impl;
 
-import com.zsls.base.BaseServiceImpl;
+import com.github.zsls.base.BaseServiceImpl;
 import com.zsls.dao.AnalogDataMapper;
 import com.zsls.entity.AnalogData;
 import com.zsls.service.IAnalogDataService;

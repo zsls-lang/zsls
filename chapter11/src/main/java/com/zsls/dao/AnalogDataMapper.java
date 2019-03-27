@@ -6,7 +6,7 @@
 */
 package com.zsls.dao;
 
-import com.zsls.base.BaseMapper;
+import com.github.zsls.base.BaseMapper;
 import com.zsls.entity.AnalogData;
 
 public interface AnalogDataMapper extends BaseMapper<AnalogData> {

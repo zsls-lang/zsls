@@ -10,8 +10,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * @author Levin
- * @since 2018/9/30 0030
+ * 全局变量配置格式化
  */
 @Configuration
 public class LocalDateTimeSerializerConfig {

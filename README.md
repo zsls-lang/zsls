@@ -2,7 +2,9 @@
 学习人家的 https://github.com/battcn/spring-boot2-learning 
 
 chapter1	SpringBoot详细配置
+
 chapter2	springboot整合thymeleaf
+
 chapter3	springboot整合jdbcTemplate
 chapter4	springboot整合jpa
 chapter5	springboot整合mybatis pagehelp分页

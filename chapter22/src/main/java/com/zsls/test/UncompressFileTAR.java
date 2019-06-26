@@ -59,7 +59,8 @@ public class UncompressFileTAR {
 					bufferedWriter = new BufferedWriter(outputStreamWriter);
 					String line;
 					while ((line = bufferedReader.readLine()) != null) {
-						bufferedWriter.write(line);
+//						bufferedWriter.write(line);
+						bufferedWriter.write(line+"/r/n");
 					}
 					bufferedWriter.flush();
 					bufferedWriter.close();

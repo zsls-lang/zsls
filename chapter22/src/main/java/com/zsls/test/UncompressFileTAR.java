@@ -1,5 +1,5 @@
 package com.zsls.test;
-import com.zsls.test.MultiMemberGZIPInputStream;
+
 import org.apache.commons.compress.archivers.ArchiveException;
 import org.apache.commons.compress.archivers.ArchiveInputStream;
 import org.apache.commons.compress.archivers.ArchiveStreamFactory;
@@ -24,21 +24,15 @@ public class UncompressFileTAR {
 //        FileInputStream fis ;
         ArchiveInputStream in = null;
 		MultiMemberGZIPInputStream is = null;
-        BufferedInputStream bufferedInputStream = null ;
         BufferedReader bufferedReader = null;
-		InputStreamReader inputStreamReader = null;
         BufferedWriter bufferedWriter = null;
-		OutputStreamWriter outputStreamWriter = null;
-		FileOutputStream fileOutputStream = null;
         try {
 //            fis = new FileInputStream(filed);
-			bufferedInputStream = new BufferedInputStream(fis);
 			is = new MultiMemberGZIPInputStream(new BufferedInputStream(fis));
             in = new ArchiveStreamFactory().createArchiveInputStream("tar", is,"UTF-8");
             
 //            String outFileName = getFileName(pathname);
-			inputStreamReader=new InputStreamReader(in,"UTF-8");
-			bufferedReader = new BufferedReader(inputStreamReader);
+			bufferedReader = new BufferedReader(new InputStreamReader(in,"UTF-8"));
             TarArchiveEntry entry = (TarArchiveEntry)in.getNextEntry();
             while(entry != null) {
                 String name = entry.getName();
@@ -54,9 +48,7 @@ public class UncompressFileTAR {
                 } else {
                     File file = mkFile(fileName);
                     System.out.println(fileName);
-					fileOutputStream=new FileOutputStream(file);
-					outputStreamWriter=new OutputStreamWriter(fileOutputStream,"UTF-8");
-					bufferedWriter = new BufferedWriter(outputStreamWriter);
+					bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"UTF-8"));
 					String line;
 					while ((line = bufferedReader.readLine()) != null) {
 //						bufferedWriter.write(line);
@@ -64,8 +56,6 @@ public class UncompressFileTAR {
 					}
 					bufferedWriter.flush();
 					bufferedWriter.close();
-					outputStreamWriter.close();
-					fileOutputStream.close();
 
                 }
                 entry = (TarArchiveEntry)in.getNextEntry();
@@ -79,14 +69,7 @@ public class UncompressFileTAR {
         } catch (ArchiveException e) {
             e.printStackTrace();
         } finally {
-			IOUtils.closeQuietly(bufferedWriter);
-			IOUtils.closeQuietly(outputStreamWriter);
-			IOUtils.closeQuietly(fileOutputStream);
 			IOUtils.closeQuietly(bufferedReader);
-			IOUtils.closeQuietly(inputStreamReader);
-			IOUtils.closeQuietly(in);
-			IOUtils.closeQuietly(is);
-			IOUtils.closeQuietly(bufferedInputStream);
         }
         return fileName;
     }

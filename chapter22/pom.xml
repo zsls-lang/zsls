@@ -12,7 +12,7 @@
     <artifactId>chapter22</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chapter22</name>
-    <description>解压 gz结尾的压缩包</description>
+    <description>解压 tar gz结尾的压缩包</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -36,6 +36,14 @@
             <artifactId>commons-compress</artifactId>
             <version>1.18</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.10.6</version>
+        </dependency>
+
 
 
 

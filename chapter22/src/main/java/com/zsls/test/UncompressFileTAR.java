@@ -32,6 +32,7 @@ public class UncompressFileTAR {
             in = new ArchiveStreamFactory().createArchiveInputStream("tar", is,"UTF-8");
             
 //            String outFileName = getFileName(pathname);
+//			bufferedReader = new BufferedReader(new InputStreamReader(in,"UTF-8"));
 			bufferedReader = new BufferedReader(new InputStreamReader(in,"UTF-8"));
             TarArchiveEntry entry = (TarArchiveEntry)in.getNextEntry();
             while(entry != null) {
@@ -51,8 +52,8 @@ public class UncompressFileTAR {
 					bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"UTF-8"));
 					String line;
 					while ((line = bufferedReader.readLine()) != null) {
-//						bufferedWriter.write(line);
-						bufferedWriter.write(line+"/r/n");
+						bufferedWriter.write(line);
+//						bufferedWriter.write(line+"/r/n");
 					}
 					bufferedWriter.flush();
 					bufferedWriter.close();
@@ -100,7 +101,13 @@ public class UncompressFileTAR {
             fname = f.substring(0,i-4);    
         }         
         return fname;    
-    }    
+    }
+
+	    public static void main(String[] args) throws FileNotFoundException {
+	    File file = new File("E:\\三盟文档\\西安理工\\172.10.255.18_online_detail-1561432214-5797146007712746.tmp.tar.gz");
+	    FileInputStream fis = new FileInputStream(file);
+	    decompress(fis,"E:\\三盟文档\\西安理工\\test");
+	}
 
 
 }

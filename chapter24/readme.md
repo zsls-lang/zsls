@@ -83,24 +83,26 @@ Successfully tagged mytestapp:latest**
 9f7f5c4aeed259b0a1b4db9f8592c30351c8dfffaa9cd50b8de655fdf47ef8b1
 
 其他启动方式：
-    docker run --name swapping -itd --net=host  mytestapp 
+    docker run --name mytestapp -itd --net=host  mytestapp 
     需要注意spring boot项目的时区问题的启动命令【关于时区处理问题，需要参考：https://www.cnblogs.com/sxdcgaq8080/p/10057385.html】
     需要注意spring boot项目启动开发配置文件和生产配置文件的配置文件的启动应用【https://www.cnblogs.com/sxdcgaq8080/p/10481974.html】
     docker run --name mytestapp -itd --net=host -v /etc/localtime:/etc/localtime:ro  -v /etc/timezone:/etc/timezone:ro  mytestapp
 
 -d 表示后台运行
 -p映射端口
+--name 表示给容器起个名字
 
 启动成功后：查看容器启动情况
-docker logs -f swapping
+docker logs -f mytestapp
 退出日志查看 使用
 Ctrl+Z
 
 可以访问 http://192.168.217.201:8080/index
 
+docker ps -a 查看容器的id 和名字（例mytestapp）
 如果想要重新启动spring boot服务，可以使用命令
-docker restart swapping
+docker restart mytestapp
 停止服务
-docker stop swapping
+docker stop mytestapp
 移除容器
-docker rm -f swapping
+docker rm -f mytestapp

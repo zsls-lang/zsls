@@ -37,6 +37,7 @@ public class Chapter26ApplicationTests {
 		Thread.sleep(500);//模拟处理其他业务请求耗时
 		LOGGER.info("处理所有业务耗时{}ms",(System.currentTimeMillis() - beginTime));
 		LOGGER.info("向客户端发送注册成功响应");
+
 	}
 
 }

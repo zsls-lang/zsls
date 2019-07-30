@@ -48,3 +48,5 @@ chapter22	解压 gz结尾的压缩包
 chapter24	docker部署springboot方法一
 
 chapter25	docker部署springboot方法二
+
+chapter26	spring事件模拟注册异步发送邮箱短信源码

@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 
+//注册我们的发布者
 @Service
 public class UserService2 implements ApplicationContextAware {
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserService2.class);

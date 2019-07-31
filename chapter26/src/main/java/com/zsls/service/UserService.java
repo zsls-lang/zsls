@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Service;
 
+//注册我们的发布者
 /**********方法一：实现除了通过实现ApplicationEventPublisherAware接口************/
 @Service
 public class UserService implements ApplicationEventPublisherAware {

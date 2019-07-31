@@ -9,6 +9,9 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
 /**
+ 在spring容器中注册事件监听器，
+ 应用上下文将会识别实现了ApplicationListener接口的Bean,
+ 并在特定时刻将所有的事件通知它们
  * 测试listener2时注释这个 @Component
  */
 //@Component

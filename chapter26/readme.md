@@ -1,0 +1,18 @@
+通过spring的事件机制来实现解耦。
+利用观察者设计模式，
+设置监听器来监听userService的注册事件（同时,我们可以很自然地将userService理解成了事件发布者），
+一旦userService注册了，监听器就完成相应的邮箱、短信发送工作(同时，我们也可以很自然地将发送邮件、发送短信理解成我们的事件源）
+
+1. 定义事件源
+利用事件通信的第一步往往便是定义我们的事件。
+在spring中，所有事件都必须扩展抽象类ApplicationEvent,同时将事件源作为构造函数参数，在这里，我们定义了发邮件、发短信两个事件
+2. 定义事件监听器
+事件监听类需要实现我们的ApplicationListener接口，
+除了可以实现ApplicationListener定义事件监听器外，
+我们还可以让事件监听类实现SmartApplicationListener（智能监听器 参考http://blog.csdn.net/qwe6112071/article/details/50967997）接口
+3. 定义事件发布者
+事件发送的代表类是ApplicationEventPublisher我们的事件发布类常实现ApplicationEventPublisherAware接口，
+同时需要定义成员属性ApplicationEventPublisher来发布我们的事件。
+
+除了通过实现ApplicationEventPublisherAware外，我们还可以实现ApplicationContextAware接口来完成定义，ApplicationContext接口继承了ApplicationEventPublisher。
+ApplicationContext是我们的事件容器上层，我们发布事件，也可以通过此容器完成发布。下面使用两种方法来定义我们的发布者

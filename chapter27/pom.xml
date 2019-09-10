@@ -12,7 +12,7 @@
     <artifactId>chapter27</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chapter27</name>
-    <description>分包实现多数据源</description>
+    <description>分包实现多数据源,用Atomikos分布式事务管理</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,6 +31,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!-- Atomikos 分布式事务 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jta-atomikos</artifactId>
         </dependency>
 
         <dependency>

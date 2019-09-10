@@ -76,4 +76,12 @@ public class TestController {
 		ts1.savetestBean4(tb);
 		return "success";
 	}
+
+	@RequestMapping("/test4.do")
+	public String test4() {
+		Test1 tb = new Test1();
+		tb.setName("bbb");
+		ts1.savetestBean5(tb);
+		return "success";
+	}
 }

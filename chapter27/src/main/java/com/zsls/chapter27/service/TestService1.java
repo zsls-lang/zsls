@@ -15,7 +15,7 @@ public class TestService1 {
 	@Autowired
 	private TestService2 ts2;
 	@Autowired
-	private Test2Mapper td2;
+	private Test2Mapper test2Mapper;
 
 	@Transactional
 	public void savetestBean(Test1 t) {
@@ -40,18 +40,38 @@ public class TestService1 {
 		test1Mapper.save(t);
 	}
 
-	@Transactional
+
 	/**
 	 * 直接注入数据源2的dao层就不收这个事务控制了
 	 * 
 	 * @param t
 	 */
+	@Transactional
 	public void savetestBean4(Test1 t) {
 		Test2 tb = new Test2();
 		tb.setName("王老师");
-		td2.save(tb);
+		test2Mapper.save(tb);
 		int i = 1 / 0;
 		test1Mapper.save(t);
+	}
+
+	/**
+	 * @Description
+	 * 断点查看，当执行完第一个库的插入时，刷新数据库表是没有数据的，
+	 * 这表明这连个事务处于同一个事务中，执行到报错一行后，
+	 * 查看数据库，没有插入数据，这表明整合分布式事务成功
+	 */
+	@Transactional
+	public void savetestBean5(Test1 t) {
+		Test2 tb = new Test2();
+		tb.setName("李老师");
+//		test2Mapper.save(tb);
+//		test1Mapper.save(t);
+		ts2.saveTeacher(tb);
+		savetestBean(t);
+		int i = 1 / 0;
+
+
 	}
 
 }

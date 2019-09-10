@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zsls.chapter27.mapper.test1.Test1Mapper">
     <insert id="save" parameterType="com.zsls.chapter27.model.Test1">
-		insert into test1
+		insert into test1(name)
 		values(#{name})
     </insert>
 </mapper>

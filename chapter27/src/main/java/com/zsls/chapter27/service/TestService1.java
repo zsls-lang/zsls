@@ -13,9 +13,9 @@ public class TestService1 {
 	@Autowired
 	private Test1Mapper test1Mapper;
 	@Autowired
-	private TestService2 service2;
+	private TestService2 ts2;
 	@Autowired
-	private Test2Mapper test2Mapper;
+	private Test2Mapper td2;
 
 	@Transactional
 	public void savetestBean(Test1 t) {
@@ -26,7 +26,7 @@ public class TestService1 {
 	public void savetestBean2(Test1 t) {
 		Test2 tb = new Test2();
 		tb.setName("王老师");
-		service2.saveTeacher(tb);
+		ts2.saveTeacher(tb);
 		int i = 1 / 0;
 		test1Mapper.save(t);
 	}
@@ -35,7 +35,7 @@ public class TestService1 {
 	public void savetestBean3(Test1 t) {
 		Test2 tb = new Test2();
 		tb.setName("李老师");
-		service2.saveTeacher2(tb);
+		ts2.saveTeacher2(tb);
 		int i = 1 / 0;
 		test1Mapper.save(t);
 	}
@@ -49,7 +49,7 @@ public class TestService1 {
 	public void savetestBean4(Test1 t) {
 		Test2 tb = new Test2();
 		tb.setName("王老师");
-		test2Mapper.save(tb);
+		td2.save(tb);
 		int i = 1 / 0;
 		test1Mapper.save(t);
 	}

@@ -1,6 +1,4 @@
-package com.zsls.chapter27.model;
-
-import org.springframework.core.style.ToStringStyler;
+package com.zsls.model;
 
 /**
  *@ClassName Test1
@@ -9,11 +7,11 @@ import org.springframework.core.style.ToStringStyler;
  *@Date 2019/9/6 16:27
  *@Version 1.0
  */
-public class Test2 {
+public class Test1 {
 	private Integer id;
 	private String name;
 
-	public Test2() {
+	public Test1() {
 	}
 
 	public Integer getId() {
@@ -31,5 +29,4 @@ public class Test2 {
 	public void setName(String name) {
 		this.name = name;
 	}
-
 }

@@ -1,4 +1,4 @@
-package com.zsls.chapter27.model;
+package com.zsls.model;
 
 /**
  *@ClassName Test1
@@ -7,11 +7,11 @@ package com.zsls.chapter27.model;
  *@Date 2019/9/6 16:27
  *@Version 1.0
  */
-public class Test1 {
+public class Test2 {
 	private Integer id;
 	private String name;
 
-	public Test1() {
+	public Test2() {
 	}
 
 	public Integer getId() {
@@ -29,4 +29,5 @@ public class Test1 {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 }

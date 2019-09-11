@@ -1,4 +1,4 @@
-package com.zsls.chapter27.property;
+package com.zsls.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

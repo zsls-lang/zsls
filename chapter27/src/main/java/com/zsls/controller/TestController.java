@@ -1,9 +1,9 @@
-package com.zsls.chapter27.controller;
+package com.zsls.controller;
 
-import com.zsls.chapter27.model.Test1;
-import com.zsls.chapter27.model.Test2;
-import com.zsls.chapter27.service.TestService1;
-import com.zsls.chapter27.service.TestService2;
+import com.zsls.model.Test1;
+import com.zsls.model.Test2;
+import com.zsls.service.TestService1;
+import com.zsls.service.TestService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

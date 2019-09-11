@@ -1,7 +1,7 @@
-package com.zsls.chapter27.config;
+package com.zsls.config;
 
 import com.mysql.cj.jdbc.MysqlXADataSource;
-import com.zsls.chapter27.property.DB1Property;
+import com.zsls.property.DB1Property;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.ibatis.io.VFS;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -11,8 +11,6 @@ import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.boot.jta.atomikos.AtomikosDataSourceBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,12 +18,11 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.zsls.chapter27.mapper.test1", sqlSessionFactoryRef = "db1SqlSessionFactory")
+@MapperScan(basePackages = "com.zsls.mapper.test1", sqlSessionFactoryRef = "db1SqlSessionFactory")
 public class DataSourceConfig1 {
 
 	@Value("${db1.mapper}")

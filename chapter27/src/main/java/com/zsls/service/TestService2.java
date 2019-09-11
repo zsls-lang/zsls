@@ -1,7 +1,7 @@
-package com.zsls.chapter27.service;
+package com.zsls.service;
 
-import com.zsls.chapter27.mapper.test2.Test2Mapper;
-import com.zsls.chapter27.model.Test2;
+import com.zsls.mapper.test2.Test2Mapper;
+import com.zsls.model.Test2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

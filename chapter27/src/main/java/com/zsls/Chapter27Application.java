@@ -1,4 +1,4 @@
-package com.zsls.chapter27;
+package com.zsls;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -50,3 +50,5 @@ chapter24	docker部署springboot方法一
 chapter25	docker部署springboot方法二
 
 chapter26	spring事件模拟注册异步发送邮箱短信源码
+
+chapter27	分包实现多数据源,用Atomikos分布式事务管理

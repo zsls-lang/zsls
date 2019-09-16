@@ -54,3 +54,5 @@ chapter26	spring事件模拟注册异步发送邮箱短信源码
 chapter27	分包实现多数据源,用Atomikos分布式事务管理
 
 chapter28	通过aop的方式实现多数据源，根据service的开头各自管控
+
+chapter29	数据库多数据源主从关系

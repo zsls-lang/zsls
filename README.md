@@ -1,5 +1,5 @@
 # zsls
-学习人家的 https://github.com/battcn/spring-boot2-learning 
+参考 https://github.com/battcn/spring-boot2-learning 
 
 chapter1	SpringBoot详细配置
 
@@ -52,3 +52,5 @@ chapter25	docker部署springboot方法二
 chapter26	spring事件模拟注册异步发送邮箱短信源码
 
 chapter27	分包实现多数据源,用Atomikos分布式事务管理
+
+chapter28	通过aop的方式实现多数据源，根据service的开头各自管控

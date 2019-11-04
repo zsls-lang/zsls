@@ -21,7 +21,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 
 /**
- * 大数据Web系统前端数据源配置类
+ * DB1数据源配置类
  */
 @SpringBootConfiguration
 @MapperScan(basePackages = "com.zsls.mapper.db1", sqlSessionFactoryRef = "db1SqlSessionFactory")

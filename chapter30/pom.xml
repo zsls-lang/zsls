@@ -12,7 +12,7 @@
     <artifactId>chapter30</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chapter30</name>
-    <description>多数据源切换demo</description>
+    <description>数据库多数据源测试没有分布式事务</description>
 
     <properties>
         <java.version>1.8</java.version>

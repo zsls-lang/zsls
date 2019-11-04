@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 多数据源事务测试
  *
- * @author acer
  *
  */
 @RestController

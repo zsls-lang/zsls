@@ -1,5 +1,7 @@
 package com.zsls.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.zsls.mapper.db1.Test1Mapper;
 import com.zsls.mapper.db2.Test2Mapper;
 import com.zsls.model.Test2;
@@ -20,8 +22,8 @@ public class TestService2Impl implements TestService2 {
 
 	@Override
 	public void getTeacher() {
-		Map<String, Object> info = test2Mapper.getInfo();
-		System.out.println(info.toString());
+		PageInfo<Map<String, Object>> pageInfo = PageHelper.startPage(1, 2).doSelectPageInfo(() -> test2Mapper.getInfo());
+		System.out.println(pageInfo.toString());
 
 	}
 
@@ -33,7 +35,7 @@ public class TestService2Impl implements TestService2 {
 	@Override
 	public void saveTeacherYYY(Test2 t) {
 		test2Mapper.getsave(t);
-		double a = 1/0;
+		double a = 1 / 0;
 		test1Mapper.getInfo();
 	}
 

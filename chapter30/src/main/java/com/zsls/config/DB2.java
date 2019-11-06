@@ -1,10 +1,13 @@
 package com.zsls.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.zsls.property.DataSourceProperty;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.ApplicationContext;
@@ -16,19 +19,25 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
+import java.sql.SQLException;
 
 /**
- * DB1据源配置类
+ * DB2据源配置类
  */
 @SpringBootConfiguration
 @MapperScan(basePackages = "com.zsls.mapper.db2", sqlSessionFactoryRef = "db2SqlSessionFactory")
 public class DB2 {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(DB2.class);
 
     @Autowired
     private Environment env;
 
     @Autowired
     private ApplicationContext ctx;
+
+	@Autowired
+	private DataSourceProperty dataSourceProperty;
 
     @Bean(name="db2DataSource")
 	@Primary
@@ -41,28 +50,33 @@ public class DB2 {
         dataSource.setUsername(env.getProperty("db2.username"));
         dataSource.setPassword(env.getProperty("db2.password"));
 
-        // 配置初始化大小、最小、最大
-        dataSource.setInitialSize(1);
-        dataSource.setMinIdle(1);
-        dataSource.setMaxActive(20);
+		// 配置初始化大小、最小、最大
+		dataSource.setInitialSize(dataSourceProperty.getInitialSize());
+		dataSource.setMinIdle(dataSourceProperty.getMinIdle());
+		dataSource.setMaxActive(dataSourceProperty.getMaxActive());
 
-        // 配置获取连接等待超时的时间，单位是毫秒
-        dataSource.setMaxWait(60000);
+		// 配置获取连接等待超时的时间，单位是毫秒
+		dataSource.setMaxWait(dataSourceProperty.getMaxWait());
 
-        // 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
-        dataSource.setTimeBetweenEvictionRunsMillis(60000);
+		// 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+		dataSource.setTimeBetweenEvictionRunsMillis(dataSourceProperty.getTimeBetweenEvictionRunsMillis());
 
-        // 配置一个连接在池中最小生存的时间，单位是毫秒
-        dataSource.setMinEvictableIdleTimeMillis(300000);
+		// 配置一个连接在池中最小生存的时间，单位是毫秒
+		dataSource.setMinEvictableIdleTimeMillis(dataSourceProperty.getMinEvictableIdleTimeMillis());
 
-        // 配置连接存活测试
-        dataSource.setValidationQuery("select 1");
-        dataSource.setTestWhileIdle(true);
-        dataSource.setTestOnBorrow(true);
-        dataSource.setTestOnReturn(true);
+		// 配置连接存活测试
+		dataSource.setValidationQuery(dataSourceProperty.getValidationQuery());
+		dataSource.setTestWhileIdle(dataSourceProperty.getTestWhileIdle());
+		dataSource.setTestOnBorrow(dataSourceProperty.getTestOnBorrow());
+		dataSource.setTestOnReturn(dataSourceProperty.getTestOnReturn());
+		dataSource.setPoolPreparedStatements(dataSourceProperty.getPoolPreparedStatements());
+		try {
+			dataSource.setFilters(dataSourceProperty.getFilters());
+		} catch (SQLException e) {
+			LOGGER.error("dataSourceProperty.getFilters==>",e);
+		}
 
-        dataSource.setPoolPreparedStatements(false);
-        return dataSource;
+		return dataSource;
     }
 
     @Bean(name="db2SqlSessionFactory")

@@ -12,7 +12,7 @@
     <artifactId>chapter30</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chapter30</name>
-    <description>springboot-druid-mybatis-pagehelper数据库多数据源</description>
+    <description>数据库多数据源springboot-druid-mybatis-pagehelper</description>
 
     <properties>
         <java.version>1.8</java.version>

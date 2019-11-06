@@ -14,7 +14,6 @@ public class Chapter30Application extends WebMvcConfigurationSupport implements 
 	public void run(String... args) throws Exception {
 		logger.info("服务启动完成!");
 	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(Chapter30Application.class, args);
 	}

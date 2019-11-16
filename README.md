@@ -1,5 +1,5 @@
 # zsls
-参考 https://github.com/battcn/spring-boot2-learning 
+部分参考 https://github.com/battcn/spring-boot2-learning 
 
 chapter1	SpringBoot详细配置
 

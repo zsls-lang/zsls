@@ -56,3 +56,5 @@ chapter27	分包实现多数据源,用Atomikos分布式事务管理
 chapter28	通过aop的方式实现多数据源，根据service的开头各自管控
 
 chapter29	数据库多数据源主从关系
+
+chapter30	springboot-druid-mybatis-pagehelper数据库多数据源

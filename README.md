@@ -58,3 +58,5 @@ chapter28	通过aop的方式实现多数据源，根据service的开头各自管
 chapter29	数据库多数据源主从关系
 
 chapter30	springboot-druid-mybatis-pagehelper数据库多数据源
+
+chapter31 springboot-dubbo-zookeeper简单学习

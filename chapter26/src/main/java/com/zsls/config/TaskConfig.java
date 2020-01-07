@@ -34,7 +34,7 @@ public class TaskConfig {
 		// 设置队列容量
 		taskExecutor.setQueueCapacity(100);
 		//		// 设置线程活跃时间（秒）
-		taskExecutor.setKeepAliveSeconds(60);
+		taskExecutor.setKeepAliveSeconds(6000);
 		// 设置默认线程名称
 		taskExecutor.setThreadNamePrefix("taskExecutor-");
 		//		// 设置拒绝策略  线程池对拒绝任务（无线程可用）的处理策略，目前只支持AbortPolicy、CallerRunsPolicy；默认为后者

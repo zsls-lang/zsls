@@ -42,7 +42,7 @@ public class TaskConfig {
 		//		// 等待所有任务结束后再关闭线程池 调度器shutdown被调用时等待当前被调度的任务完成
 		taskExecutor.setWaitForTasksToCompleteOnShutdown(true);
 		//		//等待时长
-		taskExecutor.setAwaitTerminationSeconds(60);
+		taskExecutor.setAwaitTerminationSeconds(600);
 		taskExecutor.initialize();
 		return taskExecutor;
 	}

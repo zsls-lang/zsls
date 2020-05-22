@@ -12,7 +12,7 @@
     <artifactId>chapter22</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chapter22</name>
-    <description>解压 tar gz结尾的压缩包</description>
+    <description>解压gz结尾的压缩包及nio文件复制</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -43,8 +43,6 @@
             <artifactId>ant</artifactId>
             <version>1.10.6</version>
         </dependency>
-
-
 
 
     </dependencies>

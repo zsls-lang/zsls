@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class Chapter32ApplicationTests {
 
     @Test
-    void contextLoads() {}
+    void contextLoads() {
+    }
 
 }

@@ -62,3 +62,7 @@ chapter29	数据库多数据源主从关系
 chapter30	springboot-druid-mybatis-pagehelper数据库多数据源
 
 chapter31 springboot-dubbo-zookeeper简单学习
+
+chapter32 kafka 测试 for Spring Boot
+
+chapter33 ifelse之策略 Spring Boot

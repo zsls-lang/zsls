@@ -147,4 +147,17 @@ public interface IBaseService<T> {
         return PageHelper.startPage(pageNum,pageSize).doSelectPageInfo(() -> list(record));
     }
 
+    /**
+     * 分页查询
+     *
+     * @param pageNum
+     * @param pageSize
+     * @param orderBy
+     * @param record      查询参数
+     * @return 分页集合
+     */
+    default PageInfo<T> page(T record,Integer pageNum, Integer pageSize,String orderBy) {
+        return PageHelper.startPage(pageNum,pageSize,orderBy).doSelectPageInfo(() -> list(record));
+    }
+
 }

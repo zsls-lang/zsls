@@ -12,7 +12,7 @@
     <artifactId>chapter34</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chapter34</name>
-    <description>quartz project for Spring Boot</description>
+    <description>quartz简单定时 project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>

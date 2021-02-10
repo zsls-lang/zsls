@@ -45,7 +45,7 @@ chapter21	Springboot2.X之JDK8Time时间类的配置
 
 chapter22	解压 gz结尾的压缩包
 
-chapter23   ES客户端 elasticsearch-rest-high-level-client
+chapter23   ES6或7客户端 elasticsearch-rest-high-level-client
 
 chapter24	docker部署springboot方法一
 
@@ -66,3 +66,7 @@ chapter31 springboot-dubbo-zookeeper简单学习
 chapter32 kafka 测试 for Spring Boot
 
 chapter33 ifelse之策略 Spring Boot
+
+chapter34 quartz之定时 Spring Boot
+
+chapter35 ElasticSearch5.x project for Spring Boot 查询demo

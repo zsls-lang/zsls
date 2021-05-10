@@ -70,3 +70,5 @@ chapter33 ifelse之策略 Spring Boot
 chapter34 quartz之定时 Spring Boot
 
 chapter35 ElasticSearch5.x project for Spring Boot 查询demo
+
+chapter36 masr语音识别示例

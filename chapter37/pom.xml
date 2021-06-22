@@ -12,7 +12,7 @@
     <artifactId>chapter37</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chapter37</name>
-    <description>activity7 for Spring Boot</description>
+    <description>activity7 工作流测试</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>

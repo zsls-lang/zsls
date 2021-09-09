@@ -61,16 +61,18 @@ chapter29	数据库多数据源主从关系
 
 chapter30	springboot-druid-mybatis-pagehelper数据库多数据源
 
-chapter31 springboot-dubbo-zookeeper简单学习
+chapter31   springboot-dubbo-zookeeper简单学习
 
-chapter32 kafka 测试 for Spring Boot
+chapter32   kafka 测试 for Spring Boot
 
-chapter33 ifelse之策略 Spring Boot
+chapter33   ifelse之策略 Spring Boot
 
-chapter34 quartz之定时 Spring Boot
+chapter34   quartz之定时 Spring Boot
 
-chapter35 ElasticSearch5.x project for Spring Boot 查询demo
+chapter35   ElasticSearch5.x project for Spring Boot 查询demo
 
-chapter36 masr语音识别示例
+chapter36   masr语音识别示例
 
-chapter37 activity7 工作流测试
+chapter37   activity7 工作流测试
+
+chapter38   rocketmq 单机测试

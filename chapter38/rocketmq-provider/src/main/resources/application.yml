@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /
+  port: 8081
+
+rocketmq:
+  name-server: 172.30.132.250:9876
+  producer:
+    group: producer-demo1
